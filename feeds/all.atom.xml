@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Qishansun.com</title><link href="http://" rel="alternate"></link><link href="http:///feeds/all.atom.xml" rel="self"></link><id>http://</id><updated>2020-09-17T00:00:00+08:00</updated><entry><title>"Install Ubuntu Server on laptop"</title><link href="http:///install-ubuntu-server-on-laptop.html" rel="alternate"></link><published>2020-09-17T00:00:00+08:00</published><updated>2020-09-17T00:00:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2020-09-17:/install-ubuntu-server-on-laptop.html</id><summary type="html">&lt;h2&gt;1. wifi config:&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Qishansun.com</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-09-17T00:00:00+08:00</updated><entry><title>"Install Ubuntu Server on laptop"</title><link href="/install-ubuntu-server-on-laptop.html" rel="alternate"></link><published>2020-09-17T00:00:00+08:00</published><updated>2020-09-17T00:00:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2020-09-17:/install-ubuntu-server-on-laptop.html</id><summary type="html">&lt;h2&gt;1. wifi config:&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;apt install ubuntu-drivers-common&lt;/span&gt;
 &lt;span class="err"&gt;apt install networkmanager nmtui  &lt;/span&gt;
 &lt;span class="err"&gt;nmtui&lt;/span&gt;
@@ -51,6 +51,6 @@ Now change the permissions so the file can execute   &lt;/p&gt;
 sudo chmod 755 /etc/rc.local   &lt;/p&gt;
 &lt;p&gt;now restart the rc-local service. Type the following&lt;/p&gt;
 &lt;p&gt;systemctl restart rc-local&lt;/p&gt;
-&lt;hr&gt;</content><category term="Server"></category></entry><entry><title>My First Review</title><link href="http:///my-first-review.html" rel="alternate"></link><published>2010-12-03T10:20:00+08:00</published><updated>2010-12-03T10:20:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2010-12-03:/my-first-review.html</id><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;
+&lt;hr&gt;</content><category term="Server"></category></entry><entry><title>My First Review</title><link href="/my-first-review.html" rel="alternate"></link><published>2010-12-03T10:20:00+08:00</published><updated>2010-12-03T10:20:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2010-12-03:/my-first-review.html</id><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;
 &lt;p&gt;hello &lt;/p&gt;
 &lt;p&gt;dasd&lt;/p&gt;</content><category term="Review"></category></entry></feed>
