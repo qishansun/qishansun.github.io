@@ -9,19 +9,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Laptop Server, Ubuntu Server, Server, " />
+<meta name="keywords" content=", Text, " />
 
-<meta property="og:title" content="Install Ubuntu Server on laptop "/>
-<meta property="og:url" content="/install-ubuntu-server-on-laptop.html" />
-<meta property="og:description" content="1. WIFI Conf Edit on netplan is an option, but nmtui is much faster. apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then follow the graphics, connect to wifi ap. 2. Prevent system suspend when lid closing Dell Community If you&#39;re not logged in as root, you&#39;ll need to add …" />
+<meta property="og:title" content="Pelican Markdown Metadata "/>
+<meta property="og:url" content="/pelican-markdown-metadata.html" />
+<meta property="og:description" content="Metadata Description title Title of the article or page date Publication date (e.g., YYYY-MM-DD HH:SS) modified Modification date (e.g., YYYY-MM-DD HH:SS) tags Content tags, separated by commas keywords Content keywords, separated by commas (HTML content only) category Content category (one only — not multiple) slug Identifier used …" />
 <meta property="og:site_name" content="Qishansun.com" />
 <meta property="og:article:author" content="Qishansun" />
-<meta property="og:article:published_time" content="2020-09-17T00:00:00+08:00" />
-<meta property="og:article:modified_time" content="2020-09-17T22:42:03.590332+08:00" />
-<meta name="twitter:title" content="Install Ubuntu Server on laptop ">
-<meta name="twitter:description" content="1. WIFI Conf Edit on netplan is an option, but nmtui is much faster. apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then follow the graphics, connect to wifi ap. 2. Prevent system suspend when lid closing Dell Community If you&#39;re not logged in as root, you&#39;ll need to add …">
+<meta property="og:article:published_time" content="2020-09-17T23:12:34.372349+08:00" />
+<meta property="og:article:modified_time" content="2020-09-17T23:12:34.372349+08:00" />
+<meta name="twitter:title" content="Pelican Markdown Metadata ">
+<meta name="twitter:description" content="Metadata Description title Title of the article or page date Publication date (e.g., YYYY-MM-DD HH:SS) modified Modification date (e.g., YYYY-MM-DD HH:SS) tags Content tags, separated by commas keywords Content keywords, separated by commas (HTML content only) category Content category (one only — not multiple) slug Identifier used …">
 
-        <title>Install Ubuntu Server on laptop  · Qishansun.com
+        <title>Pelican Markdown Metadata  · Qishansun.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
@@ -66,8 +66,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="/install-ubuntu-server-on-laptop.html">
-                Install Ubuntu Server on laptop
+            <a href="/pelican-markdown-metadata.html">
+                Pelican Markdown Metadata
             </a>
         </h1>
     </header>
@@ -76,50 +76,81 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p><img alt="Ubuntu Server" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_350,h_121/https://assets.ubuntu.com/v1/55eda3ae-Servers+-white.svg"></p>
-<h2>1. WIFI Conf</h2>
-<p>Edit on netplan is an option, but <strong>nmtui</strong> is much faster.</p>
-<div class="highlight"><pre><span></span><span class="err">apt install ubuntu-drivers-common</span>
-<span class="err">apt install networkmanager nmtui  </span>
-<span class="err">nmtui</span>
-</pre></div>
-
-
-<p>then follow the graphics, connect to wifi ap. </p>
-<hr>
-<h2>2. Prevent system suspend when lid closing</h2>
-<p><a href="https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201">Dell Community</a></p>
-<p>If you're not logged in as root, you'll need to add "sudo " to invoke the editor as in:</p>
-<p><code>sudo nano /etc/systemd/logind.conf</code>  </p>
-<p>In the file above, changed this line:</p>
-<p><code>HandleLidSwitch=suspend</code>   </p>
-<p>to this:</p>
-<p><code>HandleLidSwitch=ignore</code>   </p>
-<p>After saving the file,  ran:</p>
-<p><code>sudo systemctl restart systemd-logind</code>   </p>
-<p>This will immediately resolve system suspending issue.   </p>
-<hr>
-<h2>3. Enable screen off after lid closing</h2>
-<p>Server is running now, smooth Wifi and no suspending. If you look closely, you'll find the screen is bright even lid closing. It should be not a problem, if you don't care about heat, power waste, screen life expiration.</p>
-<p><a href="https://askubuntu.com/questions/1048063/ubuntu-server-how-do-disable-sleep-when-laptop-screen-is-closed-but-allow-scre">Ubuntu Community</a></p>
-<p>Since Ubuntu 18.04 doesn't have a /etc/rc.local file by default we need to create one.</p>
-<p><code>sudo vi /etc/rc.local</code>   </p>
-<p>press i to enter insert mode</p>
-<p>Type the following 3 lines</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash    </span>
-setterm --blank <span class="m">1</span> <span class="c1"># here 1 means 1 minute </span>
-<span class="nb">exit</span> <span class="m">0</span> 
-</pre></div>
-</td></tr></table>
-
-<p>Next press escape, then type :wq to save and quit vi  </p>
-<p>Now change the permissions so the file can execute   </p>
-<p><code>sudo chown root /etc/rc.local</code> <br>
-<code>sudo chmod 755 /etc/rc.local</code>   </p>
-<p>now restart the rc-local service. Type the following</p>
-<p><code>systemctl restart rc-local</code></p>
+            <table>
+<thead>
+<tr>
+<th align="center">Metadata</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">title</td>
+<td align="left">Title of the article or page</td>
+</tr>
+<tr>
+<td align="center">date</td>
+<td align="left">Publication date (e.g., YYYY-MM-DD HH:SS)</td>
+</tr>
+<tr>
+<td align="center">modified</td>
+<td align="left">Modification date (e.g., YYYY-MM-DD HH:SS)</td>
+</tr>
+<tr>
+<td align="center">tags</td>
+<td align="left">Content tags, separated by commas</td>
+</tr>
+<tr>
+<td align="center">keywords</td>
+<td align="left">Content keywords, separated by commas (HTML content only)</td>
+</tr>
+<tr>
+<td align="center">category</td>
+<td align="left">Content category (one only — not multiple)</td>
+</tr>
+<tr>
+<td align="center">slug</td>
+<td align="left">Identifier used in URLs and translations</td>
+</tr>
+<tr>
+<td align="center">author</td>
+<td align="left">Content author, when there is only one</td>
+</tr>
+<tr>
+<td align="center">authors</td>
+<td align="left">Content authors, when there are multiple</td>
+</tr>
+<tr>
+<td align="center">summary</td>
+<td align="left">Brief description of content for index pages</td>
+</tr>
+<tr>
+<td align="center">lang</td>
+<td align="left">Content language ID (en, fr, etc.)</td>
+</tr>
+<tr>
+<td align="center">translation</td>
+<td align="left">If content is a translation of another (true or false)</td>
+</tr>
+<tr>
+<td align="center">status</td>
+<td align="left">Content status: draft, hidden, or published</td>
+</tr>
+<tr>
+<td align="center">template</td>
+<td align="left">Name of template to use to generate content (without extension)</td>
+</tr>
+<tr>
+<td align="center">save_as</td>
+<td align="left">Save content to this relative file path</td>
+</tr>
+<tr>
+<td align="center">url</td>
+<td align="left">URL to use for this article/page</td>
+</tr>
+</tbody>
+</table>
+<p><strong>the title is the only required metadata. </strong></p>
 
 
              
@@ -137,27 +168,17 @@ setterm --blank <span class="m">1</span> <span class="c1"># here 1 means 1 minut
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/tab-vs-space.html" title="Previous: Tab vs. Space">Tab vs. Space</a></li>
-                <li class="next-article"><a href="/pelican-markdown-metadata.html" title="Next: Pelican Markdown Metadata">Pelican Markdown Metadata</a> »</li>
+                <li class="previous-article">« <a href="/install-ubuntu-server-on-laptop.html" title="Previous: Install Ubuntu Server on laptop">Install Ubuntu Server on laptop</a></li>
             </ul>
             </nav>
             </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-09-17T00:00:00+08:00">Sep 17, 2020</time>
+            <time itemprop="dateCreated" datetime="2020-09-17T23:12:34.372349+08:00">Sep 17, 2020</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#server-ref">Server</a>
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article">
-                <li><a href="/tags.html#laptop-server-ref">Laptop Server
-                    <span>1</span>
-</a></li>
-                <li><a href="/tags.html#ubuntu-server-ref">Ubuntu Server
-                    <span>1</span>
-</a></li>
-            </ul>
+            <a class="category-link" href="/categories.html#text-ref">Text</a>
 <h4>Contact</h4>
 <div id="sidebar-social-link">
 </div>

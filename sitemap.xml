@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-09-17T22:50:53-00:00</lastmod>
+<lastmod>2020-09-17T23:14:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-09-17T22:50:53-00:00</lastmod>
+<lastmod>2020-09-17T23:14:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-09-17T22:50:53-00:00</lastmod>
+<lastmod>2020-09-17T23:14:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/authors.html</loc>
-<lastmod>2020-09-17T22:50:53-00:00</lastmod>
+<lastmod>2020-09-17T23:14:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-09-17T22:50:53-00:00</lastmod>
+<lastmod>2020-09-17T23:14:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>/pelican-markdown-metadata.html</loc>
+<lastmod>2020-09-17T23:12:34+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -67,6 +74,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/category/text.html</loc>
+<lastmod>2020-09-17T23:12:34+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/laptop-server.html</loc>
 <lastmod>2020-09-17T22:42:03+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -82,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/qishansun.html</loc>
-<lastmod>2020-09-17T22:48:16+08:06</lastmod>
+<lastmod>2020-09-17T23:12:34+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
