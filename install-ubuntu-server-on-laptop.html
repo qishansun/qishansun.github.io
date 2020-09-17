@@ -1,91 +1,82 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="" />
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Qishansun" />
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+<meta name="keywords" content=", Server, " />
 
-  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+<meta property="og:title" content="&#34;Install Ubuntu Server on laptop&#34; "/>
+<meta property="og:url" content="/install-ubuntu-server-on-laptop.html" />
+<meta property="og:description" content="1. wifi config: apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then connect to wifi ap 2. Provent system suspend when lid closing: https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201 If you&#39;re not logged in as root, you&#39;ll need to add &#34;sudo &#34; to invoke the editor as in …" />
+<meta property="og:site_name" content="Qishansun.com" />
+<meta property="og:article:author" content="Qishansun" />
+<meta property="og:article:published_time" content="2020-09-17T00:00:00+08:00" />
+<meta name="twitter:title" content="&#34;Install Ubuntu Server on laptop&#34; ">
+<meta name="twitter:description" content="1. wifi config: apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then connect to wifi ap 2. Provent system suspend when lid closing: https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201 If you&#39;re not logged in as root, you&#39;ll need to add &#34;sudo &#34; to invoke the editor as in …">
 
+        <title>&#34;Install Ubuntu Server on laptop&#34;  · Qishansun.com
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
 
-    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Qishansun.com Atom">
-
-
-
-
-
-<meta name="author" content="Qishansun" />
-<meta name="description" content="1. wifi config: apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then connect to wifi ap 2. Provent system suspend when lid closing: https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201 If you&#39;re not logged in as root, you&#39;ll need to add &#34;sudo &#34; to invoke the editor as in …" />
-<meta name="keywords" content="">
-
-<meta property="og:site_name" content="Qishansun.com"/>
-<meta property="og:title" content="&#34;Install Ubuntu Server on laptop&#34;"/>
-<meta property="og:description" content="1. wifi config: apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then connect to wifi ap 2. Provent system suspend when lid closing: https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201 If you&#39;re not logged in as root, you&#39;ll need to add &#34;sudo &#34; to invoke the editor as in …"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="/install-ubuntu-server-on-laptop.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2020-09-17 00:00:00+08:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="/author/qishansun.html">
-<meta property="article:section" content="Server"/>
-<meta property="og:image" content="">
-
-  <title>Qishansun.com &ndash; &#34;Install Ubuntu Server on laptop&#34;</title>
-
-</head>
-<body>
-  <aside>
-    <div>
-      <a href="">
-        <img src="/theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href=""></a></h1>
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Qishansun.com - Full Atom Feed" />
 
 
-      <nav>
-        <ul class="list">
-          <li><a href="/pages/about-me.html#about-me">About Me</a></li>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Qishansun.com</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/pages/about-me.html">About Me</a></li>
+                                <li ><a href="/categories.html">Categories</a></li>
+                                <li ><a href="/tags.html">Tags</a></li>
+                                <li ><a href="/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/install-ubuntu-server-on-laptop.html">
+                "Install Ubuntu Server on laptop"
+            </a>
+        </h1>
+    </header>
+</div>
 
-          <li><a href="https://getpelican.com/" target="_blank">Pelican</a></li>
-          <li><a href="https://www.python.org/" target="_blank">Python.org</a></li>
-          <li><a href="https://palletsprojects.com/p/jinja/" target="_blank">Jinja2</a></li>
-          <li><a href="#" target="_blank">file</a></li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-        <li><a class="sc-links" href="#" target="_blank"><i class="fa fa-links"></i></a></li>
-        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
-      </ul>
-    </div>
-
-
-  </aside>
-  <main>
-
-
-<article class="single">
-  <header>
-      
-    <h1 id="install-ubuntu-server-on-laptop">"Install Ubuntu Server on laptop"</h1>
-    <p>
-          Posted on Thu 17 September 2020 in <a href="/category/server.html">Server</a>
-
-
-    </p>
-  </header>
-
-
-  <div>
-    <h2>1. wifi config:</h2>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <h2>1. wifi config:</h2>
 <div class="highlight"><pre><span></span><span class="err">apt install ubuntu-drivers-common</span>
 <span class="err">apt install networkmanager nmtui  </span>
 <span class="err">nmtui</span>
@@ -127,43 +118,99 @@ sudo chmod 755 /etc/rc.local   </p>
 <p>now restart the rc-local service. Type the following</p>
 <p>systemctl restart rc-local</p>
 <hr>
-  </div>
-  <div class="tag-cloud">
-    <p>
-    </p>
-  </div>
 
 
-  <div class="neighbors">
-    <a class="btn float-left" href="/tab-he-space-bu-xiang-rong.html" title="Tab 和 Space 不相容">
-      <i class="fa fa-angle-left"></i>     Previous Post
-
-    </a>
-  </div>
+             
+ 
+            
+            
+            
 
 
 
+
+
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/tab-he-space-bu-xiang-rong.html" title="Previous: Tab 和 Space 不相容">Tab 和 Space 不相容</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2020-09-17T00:00:00+08:00">Sep 17, 2020</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#server-ref">Server</a>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
 </article>
-
-    <footer>
-<p>&copy;  </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
+                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
 
 
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Qishansun.com ",
-  "url" : "",
-  "image": "",
-  "description": ""
-}
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
 </script>
 
-</body>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
 </html>
