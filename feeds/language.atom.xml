@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Qishansun.com - Language</title><link href="/" rel="alternate"></link><link href="/feeds/language.atom.xml" rel="self"></link><id>/</id><updated>2010-12-03T10:20:00+08:00</updated><entry><title>Tab 和 Space 不相容</title><link href="/tab-he-space-bu-xiang-rong.html" rel="alternate"></link><published>2010-12-03T10:20:00+08:00</published><updated>2010-12-03T10:20:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2010-12-03:/tab-he-space-bu-xiang-rong.html</id><content type="html">&lt;p&gt;在 Makefile 中，句首只认 Tab
+在 Python, Json, Yaml 。。。。，中，Space 是一等公民&lt;/p&gt;</content><category term="Language"></category></entry></feed>

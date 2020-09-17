@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Qishansun" />
-        <meta name="description" content="" />
+    <meta name="author" content="Qishansun" />
+    <meta name="keywords" content="Language" />
 
 
-    <title>Qishansun.com - Categories</title>
+    <title>Language - Qishansun.com</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
 
@@ -127,8 +127,8 @@
                         Categories
                     </a>
                 </li>
-                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
-                    <li >
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse in">
+                    <li class="active">
                         <a href="/category/language.html">
                             <i class="fa fa-folder-open padding-small"></i>
                             Language
@@ -157,11 +157,23 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-    <h1>Categories on Qishansun.com</h1>
-    <ul>
-        <li><a href="/category/language.html">Language</a> (1)</li>
-        <li><a href="/category/server.html">Server</a> (1)</li>
-    </ul>
+<div class="row">
+    <div class="col-lg-9">
+        <header class="page-header">
+            <h1>Articles in Language</h1>
+        </header>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-9">
+            <article>
+                <h4>
+                    <time datetime="2010-12-03T10:20:00+08:00"> Fri 03 December 2010</time>
+                    <a href="/tab-he-space-bu-xiang-rong.html">Tab 和 Space 不相容</a>
+                </h4>
+            </article>
+    </div>
+</div>
 <footer>
     <hr>
     <div class="row">
@@ -183,5 +195,24 @@
     <script src="/theme/js/bootstrap.min.js"></script>
     <!-- twitchy Script -->
     <script src="/theme/js/pelican_twitchy.min.js"></script>
+<script>
+    function FadeInOnScroll(ObjectList){
+        ObjectList.each(function(i) {
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > bottom_of_object ){
+                $(this).fadeTo(750,1);
+            }
+        });
+    }
+
+    articles = $("article").fadeTo(0, 0.05);
+    FadeInOnScroll(articles)
+
+    $(window).scroll(function() {
+        FadeInOnScroll(articles)
+    });
+</script>
 </body>
 </html>
