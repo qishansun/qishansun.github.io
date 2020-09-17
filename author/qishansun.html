@@ -1,200 +1,47 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="">	
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Qishansun" />
-        <meta name="description" content="" />
+	<meta charset="utf-8"/>
+	<title>Qishansun - Qishansun.com</title>	
+	<meta name="author" content="Qishansun">
+	
+
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
 
 
-    <title>Qishansun.com - Articles by Qishansun</title>
-
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
-
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="/theme/css/pygments/native.css" rel="stylesheet" />
-    
-    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    <!-- Feeds -->
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Qishansun.com ATOM Feed" />
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Qishansun.com Atom Feed" />
 </head>
-<body data-spy="scroll" data-target="#scrollspy">
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper-small" class="twitchy-background">
-            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
-                <li>
-        <a href="" title="Qishansun.com" class="collapsed">
-            <span class="glyphicon glyphicon-home"></span>
-        </a>
-    </li>
-                <li class="nav-divider"></li>
-                <li>
-        <a href="/archives.html" title="Recent Articles" class="collapsed">
-            <span class="glyphicon glyphicon-th-list"></span>
-        </a>
-    </li>
-                
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
-                        <i class="fa fa-users padding-small"></i>
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
-                    <li>
-                        <a href="#" title="Another social link"><i class="fa fa-another-social-link-square fa-lg padding-small"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" title="links"><i class="fa fa-links-square fa-lg padding-small"></i></a>
-                    </li>
-                </ul></li>
-                <li class="nav-divider"></li>
-                <li>
-        <a href="#" title="Back to top" class="collapsed">
-            <span class="fa fa-arrow-up"></span>
-        </a>
-    </li>
-            </ul>
-        </div>
-        <div id="sidebar-wrapper" class="twitchy-background">
-            <ul id="accordion" class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/">
-                            <span class="glyphicon glyphicon-home padding-small"></span>
-                            Qishansun.com
-                    </a>
-                </li>
-                    <li>
-                        <a href="/archives.html">
-                            <span class="glyphicon glyphicon-th-list padding-small"></span>
-                            Recent Articles
-                        </a>
-                    </li>
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
-                        <i class="fa fa-users padding-small"></i>
-                        Contact
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
-                    <li>
-                        <a href="#" title="Another social link">
-                            <i class="fa fa-another-social-link-square fa-lg padding-small"></i>
-                            Another social link
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="links">
-                            <i class="fa fa-links-square fa-lg padding-small"></i>
-                            links
-                        </a>
-                    </li>
-                </ul></li>
-                
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
-                        <i class="fa fa-folder-open padding-small"></i>
-                        Pages
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
-                    <li>
-                        <a href="/pages/about-me.html">
-                            <i class="fa fa-file-text padding-small"></i>
-                            About Me
-                        </a>
-                    </li>
-                </ul></li>
-                
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
-                        <i class="fa fa-folder-open padding-small"></i>
-                        Categories
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
-                    <li >
-                        <a href="/category/language.html">
-                            <i class="fa fa-folder-open padding-small"></i>
-                            Language
-                            <span class="badge pull-right categorybadge">1</span>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="/category/server.html">
-                            <i class="fa fa-folder-open padding-small"></i>
-                            Server
-                            <span class="badge pull-right categorybadge">1</span>
-                        </a>
-                    </li>
-                </ul></li>
-                
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <!-- open/close sidebar -->
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
-            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
-        </a>
-       <!-- /open/close sidebar -->
+	
+<body>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-<section id="content" class="body">
-    <div class="row">
-        <div class="col-lg-9">
-            <div class="jumbotron">  
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Qishansun.com</h1>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-9">
-            <h2>Recent Articles:</h2>
-        </div>
-    </div>
-</section>
-<div class="row">
-    <div class="col-lg-9">
-            <article>
-                <h2>
-                    <a href="/install-ubuntu-server-on-laptop.html">"Install Ubuntu Server on laptop"</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2020-09-17T00:00:00+08:00"> Thu 17 September 2020</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/server.html">Server</a>
-            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    <h2>1. wifi config:</h2>
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	      <a href="/feeds/all.atom.xml" rel="alternate"><img src="/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
+	    </div>
+		<a href="" class="title">Qishansun.com</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+
+<h1>Posts published by: Qishansun</h1>
+
+<article class="summary">
+<div class="metadata">
+  <time datetime="2020-09-17T00:00:00+08:00" pubdate>Thu 17 September 2020</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/qishansun.html">Qishansun</a>
+    </address>
+  in <a href="/category/server.html">Server</a>
+</div>  <div>
+    <h2>
+      <a href="/install-ubuntu-server-on-laptop.html" rel="bookmark" title="Permalink to "Install Ubuntu Server on laptop"">"Install Ubuntu Server on laptop"</a>
+    </h2>
+    <p><h2>1. wifi config:</h2>
 <div class="highlight"><pre><span></span><span class="err">apt install ubuntu-drivers-common</span>
 <span class="err">apt install networkmanager nmtui  </span>
 <span class="err">nmtui</span>
@@ -205,74 +52,72 @@
 <hr>
 <h2>2. Provent system suspend when lid closing:</h2>
 <p>https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201</p>
-<p>If you're not logged in as root, you'll need to add "sudo " to invoke the editor as in …</p>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2>
-                    <a href="/tab-he-space-bu-xiang-rong.html">Tab 和 Space 不相容</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2010-12-03T10:20:00+08:00"> Fri 03 December 2010</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/language.html">Language</a>
-            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    <p>在 Makefile 中，句首只认 Tab <br>
-在 Python, Json, Yaml 。。。。，中，Space 是一等公民</p>
-                </div>
-            </article>
-        <div class="btn-more text-right">
-            <a class="btn btn-default btn-xs twitchy-background" href="/archives.html">
-                View all Articles ...
-            </a>
-        </div>
-    </div>
+<p>If you're not logged in as root, you'll need to add "sudo " to invoke the editor as in …</p></p>
+  </div>
+</article><article class="summary">
+<div class="metadata">
+  <time datetime="2010-12-03T10:20:00+08:00" pubdate>Fri 03 December 2010</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/qishansun.html">Qishansun</a>
+    </address>
+  in <a href="/category/language.html">Language</a>
+</div>  <div>
+    <h2>
+      <a href="/tab-he-space-bu-xiang-rong.html" rel="bookmark" title="Permalink to Tab 和 Space 不相容">Tab 和 Space 不相容</a>
+    </h2>
+    <p><p>在 Makefile 中，句首只认 Tab <br>
+在 Python, Json, Yaml 。。。。，中，Space 是一等公民</p></p>
+  </div>
+</article>
+<div class="pagination">
+    Page 1 / 1
 </div>
-<footer>
-    <hr>
-    <div class="row">
-        <div class="col-lg-9 text-center">
-            <p><small>
-                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
-                &middot;                    &copy; 2020 Qishansun
-            </small></p>
-        </div>
-    </div>
-</footer>            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-    </div>
-    <!-- /#wrapper -->
-    <!-- jQuery Version 1.11.2 -->
-    <script src="/theme/js/jquery-1.11.2.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/theme/js/bootstrap.min.js"></script>
-    <!-- twitchy Script -->
-    <script src="/theme/js/pelican_twitchy.min.js"></script>
-<script>
-    function FadeInOnScroll(ObjectList){
-        ObjectList.each(function(i) {
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-            if( bottom_of_window > bottom_of_object ){
-                $(this).fadeTo(750,1);
-            }
-        });
-    }
-    articles = $("article").fadeTo(0, 0.05);
-    FadeInOnScroll(articles)
-    $(window).scroll(function() {
-        FadeInOnScroll(articles)
-    });
-</script>
+		  </div>	
+		  
+		  <div class="sidebar">
+		    <div class="sidebar-container" >
+
+
+  	          <nav>
+	            <h2>Categories</h2>
+	            <ul>
+	                <li ><a href="/category/language.html">Language</a></li>
+	                <li ><a href="/category/server.html">Server</a></li>
+	            </ul>
+	          </nav>
+
+	            <aside>
+	            <h2>Social</h2>
+			      <ul class="social">
+				    <li><a href="#">links</a><i></i></li>
+				    <li><a href="#">Another social link</a><i></i></li>
+			      </ul>
+			    </aside>
+
+	            <aside>
+	              <h2>Blogroll</h2>
+	              <ul>
+	                  <li><a href="https://getpelican.com/">Pelican</a></li>
+	                  <li><a href="https://www.python.org/">Python.org</a></li>
+	                  <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
+	                  <li><a href="#">file</a></li>
+	              </ul>
+	            </aside>
+	        </div>
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  Qishansun - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
 </body>
 </html>
