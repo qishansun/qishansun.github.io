@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Qishansun" />
-        <meta name="description" content="" />
+        <meta name="description" content="1. wifi config: apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then connect to wifi ap 2. Provent system suspend when lid closing: https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201 If you&#39;re not logged in as root, you&#39;ll need to add &#34;sudo &#34; to invoke the editor as in …" />
 
 
-    <title>Qishansun.com - Tags</title>
+    <title>"Install Ubuntu Server on laptop" - Qishansun.com</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
 
@@ -133,7 +133,7 @@
                             <span class="badge pull-right categorybadge">1</span>
                         </a>
                     </li>
-                    <li >
+                    <li class="active">
                         <a href="/category/server.html">
                             <i class="fa fa-folder-open padding-small"></i>
                             Server
@@ -155,9 +155,87 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-    <h1>Tags for Qishansun.com</h1>
-    <ul>
-    </ul>
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/install-ubuntu-server-on-laptop.html"
+                           rel="bookmark"
+                           title="Permalink to "Install Ubuntu Server on laptop"">
+                            "Install Ubuntu Server on laptop"
+                        </a>
+                        <small>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2020-09-17T00:00:00+08:00"> Thu 17 September 2020</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/server.html">Server</a>
+            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
+                    <h2>1. wifi config:</h2>
+<div class="highlight"><pre><span></span><span class="err">apt install ubuntu-drivers-common</span>
+<span class="err">apt install networkmanager nmtui  </span>
+<span class="err">nmtui</span>
+</pre></div>
+
+
+<p>then connect to wifi ap </p>
+<hr>
+<h2>2. Provent system suspend when lid closing:</h2>
+<p>https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201</p>
+<p>If you're not logged in as root, you'll need to add "sudo " to invoke the editor as in:</p>
+<p><code>sudo nano /etc/systemd/logind.conf</code> <br>
+In the file above, I changed only this line:</p>
+<h1>HandleLidSwitch=suspend</h1>
+<p>to this:</p>
+<p><code>HandleLidSwitch=ignore</code> <br>
+After saving the file, I ran:</p>
+<p><code>sudo systemctl restart systemd-logind</code> <br>
+This immediately resolved the problem.</p>
+<hr>
+<h2>3. Enable screen off after lid closing:</h2>
+<p>https://askubuntu.com/questions/1048063/ubuntu-server-how-do-disable-sleep-when-laptop-screen-is-closed-but-allow-scre</p>
+<p>Since Ubuntu 18.04 doesn't have a /etc/rc.local file by default we need to create one.</p>
+<p><code>sudo vi /etc/rc.local</code> <br>
+press i to enter insert mode</p>
+<p>Type the following 3 lines</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash    </span>
+setterm --blank <span class="m">1</span> <span class="c1"># here 1 means 1 minute </span>
+<span class="nb">exit</span> <span class="m">0</span> 
+</pre></div>
+</td></tr></table>
+
+<p>Next press escape, then type :wq to save and quit vi<br>
+Now change the permissions so the file can execute   </p>
+<p>sudo chown root /etc/rc.local <br>
+sudo chmod 755 /etc/rc.local   </p>
+<p>now restart the rc-local service. Type the following</p>
+<p>systemctl restart rc-local</p>
+<hr>
+                </div>
+                <footer class="text-right">
+                    <p>- Qishansun</p>
+                </footer>
+            </div>
+        </div>
+    </article>
+</section>
 <footer>
     <hr>
     <div class="row">
@@ -179,5 +257,6 @@
     <script src="/theme/js/bootstrap.min.js"></script>
     <!-- twitchy Script -->
     <script src="/theme/js/pelican_twitchy.min.js"></script>
+
 </body>
 </html>
