@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-hans">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +9,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content=", Server, " />
+<meta name="keywords" content="Laptop Server, Ubuntu Server, Server, " />
 
-<meta property="og:title" content="&#34;Install Ubuntu Server on laptop&#34; "/>
+<meta property="og:title" content="Install Ubuntu Server on laptop "/>
 <meta property="og:url" content="/install-ubuntu-server-on-laptop.html" />
-<meta property="og:description" content="1. wifi config: apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then connect to wifi ap 2. Provent system suspend when lid closing: https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201 If you&#39;re not logged in as root, you&#39;ll need to add &#34;sudo &#34; to invoke the editor as in …" />
+<meta property="og:description" content="1. WIFI Conf Edit on netplan is an option, but nmtui is much faster. apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then follow the graphics, connect to wifi ap. 2. Prevent system suspend when lid closing Dell Community If you&#39;re not logged in as root, you&#39;ll need to add …" />
 <meta property="og:site_name" content="Qishansun.com" />
 <meta property="og:article:author" content="Qishansun" />
 <meta property="og:article:published_time" content="2020-09-17T00:00:00+08:00" />
-<meta name="twitter:title" content="&#34;Install Ubuntu Server on laptop&#34; ">
-<meta name="twitter:description" content="1. wifi config: apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then connect to wifi ap 2. Provent system suspend when lid closing: https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201 If you&#39;re not logged in as root, you&#39;ll need to add &#34;sudo &#34; to invoke the editor as in …">
+<meta property="og:article:modified_time" content="2020-09-17T22:42:03.590332+08:00" />
+<meta name="twitter:title" content="Install Ubuntu Server on laptop ">
+<meta name="twitter:description" content="1. WIFI Conf Edit on netplan is an option, but nmtui is much faster. apt install ubuntu-drivers-common apt install networkmanager nmtui nmtui then follow the graphics, connect to wifi ap. 2. Prevent system suspend when lid closing Dell Community If you&#39;re not logged in as root, you&#39;ll need to add …">
 
-        <title>&#34;Install Ubuntu Server on laptop&#34;  · Qishansun.com
+        <title>Install Ubuntu Server on laptop  · Qishansun.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
@@ -48,7 +49,6 @@
                                        "/"
                                     >Home</a>
                                 </li>
-                                <li ><a href="/pages/about-me.html">About Me</a></li>
                                 <li ><a href="/categories.html">Categories</a></li>
                                 <li ><a href="/tags.html">Tags</a></li>
                                 <li ><a href="/archives.html">Archives</a></li>
@@ -67,7 +67,7 @@
     <header class="page-header span10 offset2">
         <h1>
             <a href="/install-ubuntu-server-on-laptop.html">
-                "Install Ubuntu Server on laptop"
+                Install Ubuntu Server on laptop
             </a>
         </h1>
     </header>
@@ -76,32 +76,35 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h2>1. wifi config:</h2>
+            <p><img alt="Ubuntu Server" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_350,h_121/https://assets.ubuntu.com/v1/55eda3ae-Servers+-white.svg"></p>
+<h2>1. WIFI Conf</h2>
+<p>Edit on netplan is an option, but <strong>nmtui</strong> is much faster.</p>
 <div class="highlight"><pre><span></span><span class="err">apt install ubuntu-drivers-common</span>
 <span class="err">apt install networkmanager nmtui  </span>
 <span class="err">nmtui</span>
 </pre></div>
 
 
-<p>then connect to wifi ap </p>
+<p>then follow the graphics, connect to wifi ap. </p>
 <hr>
-<h2>2. Provent system suspend when lid closing:</h2>
-<p>https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201</p>
+<h2>2. Prevent system suspend when lid closing</h2>
+<p><a href="https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201">Dell Community</a></p>
 <p>If you're not logged in as root, you'll need to add "sudo " to invoke the editor as in:</p>
-<p><code>sudo nano /etc/systemd/logind.conf</code> <br>
-In the file above, I changed only this line:</p>
-<h1>HandleLidSwitch=suspend</h1>
+<p><code>sudo nano /etc/systemd/logind.conf</code>  </p>
+<p>In the file above, changed this line:</p>
+<p><code>HandleLidSwitch=suspend</code>   </p>
 <p>to this:</p>
-<p><code>HandleLidSwitch=ignore</code> <br>
-After saving the file, I ran:</p>
-<p><code>sudo systemctl restart systemd-logind</code> <br>
-This immediately resolved the problem.</p>
+<p><code>HandleLidSwitch=ignore</code>   </p>
+<p>After saving the file,  ran:</p>
+<p><code>sudo systemctl restart systemd-logind</code>   </p>
+<p>This will immediately resolve system suspending issue.   </p>
 <hr>
-<h2>3. Enable screen off after lid closing:</h2>
-<p>https://askubuntu.com/questions/1048063/ubuntu-server-how-do-disable-sleep-when-laptop-screen-is-closed-but-allow-scre</p>
+<h2>3. Enable screen off after lid closing</h2>
+<p>Server is running now, smooth Wifi and no suspending. If you look closely, you'll find the screen is bright even lid closing. It should be not a problem, if you don't care about heat, power waste, screen life expiration.</p>
+<p><a href="https://askubuntu.com/questions/1048063/ubuntu-server-how-do-disable-sleep-when-laptop-screen-is-closed-but-allow-scre">Ubuntu Community</a></p>
 <p>Since Ubuntu 18.04 doesn't have a /etc/rc.local file by default we need to create one.</p>
-<p><code>sudo vi /etc/rc.local</code> <br>
-press i to enter insert mode</p>
+<p><code>sudo vi /etc/rc.local</code>   </p>
+<p>press i to enter insert mode</p>
 <p>Type the following 3 lines</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -111,13 +114,12 @@ setterm --blank <span class="m">1</span> <span class="c1"># here 1 means 1 minut
 </pre></div>
 </td></tr></table>
 
-<p>Next press escape, then type :wq to save and quit vi<br>
-Now change the permissions so the file can execute   </p>
-<p>sudo chown root /etc/rc.local <br>
-sudo chmod 755 /etc/rc.local   </p>
+<p>Next press escape, then type :wq to save and quit vi  </p>
+<p>Now change the permissions so the file can execute   </p>
+<p><code>sudo chown root /etc/rc.local</code> <br>
+<code>sudo chmod 755 /etc/rc.local</code>   </p>
 <p>now restart the rc-local service. Type the following</p>
-<p>systemctl restart rc-local</p>
-<hr>
+<p><code>systemctl restart rc-local</code></p>
 
 
              
@@ -135,7 +137,7 @@ sudo chmod 755 /etc/rc.local   </p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/tab-he-space-bu-xiang-rong.html" title="Previous: Tab 和 Space 不相容">Tab 和 Space 不相容</a></li>
+                <li class="previous-article">« <a href="/tab-vs-space.html" title="Previous: Tab vs. Space">Tab vs. Space</a></li>
             </ul>
             </nav>
             </aside>
@@ -143,8 +145,18 @@ sudo chmod 755 /etc/rc.local   </p>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2020-09-17T00:00:00+08:00">Sep 17, 2020</time>
+
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#server-ref">Server</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags.html#laptop-server-ref">Laptop Server
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#ubuntu-server-ref">Ubuntu Server
+                    <span>1</span>
+</a></li>
+            </ul>
 <h4>Contact</h4>
 <div id="sidebar-social-link">
 </div>
