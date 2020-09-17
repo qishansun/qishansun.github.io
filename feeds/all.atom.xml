@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Qishansun.com</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-09-17T00:00:00+08:00</updated><entry><title>"Install Ubuntu Server on laptop"</title><link href="/install-ubuntu-server-on-laptop.html" rel="alternate"></link><published>2020-09-17T00:00:00+08:00</published><updated>2020-09-17T00:00:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2020-09-17:/install-ubuntu-server-on-laptop.html</id><summary type="html">&lt;h2&gt;1. wifi config:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;apt install ubuntu-drivers-common&lt;/span&gt;
+&lt;span class="err"&gt;apt install networkmanager nmtui  &lt;/span&gt;
+&lt;span class="err"&gt;nmtui&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;then connect to wifi ap &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;2. Provent system suspend when lid closing:&lt;/h2&gt;
+&lt;p&gt;https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201&lt;/p&gt;
+&lt;p&gt;If you're not logged in as root, you'll need to add "sudo " to invoke the editor as in …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. wifi config:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;apt install ubuntu-drivers-common&lt;/span&gt;
+&lt;span class="err"&gt;apt install networkmanager nmtui  &lt;/span&gt;
+&lt;span class="err"&gt;nmtui&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;then connect to wifi ap &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;2. Provent system suspend when lid closing:&lt;/h2&gt;
+&lt;p&gt;https://www.dell.com/community/Linux-General/Stop-laptop-going-to-sleep-when-closing-the-lid-UBUNTU-Server/td-p/6086201&lt;/p&gt;
+&lt;p&gt;If you're not logged in as root, you'll need to add "sudo " to invoke the editor as in:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo nano /etc/systemd/logind.conf&lt;/code&gt; &lt;br&gt;
+In the file above, I changed only this line:&lt;/p&gt;
+&lt;h1&gt;HandleLidSwitch=suspend&lt;/h1&gt;
+&lt;p&gt;to this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HandleLidSwitch=ignore&lt;/code&gt; &lt;br&gt;
+After saving the file, I ran:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo systemctl restart systemd-logind&lt;/code&gt; &lt;br&gt;
+This immediately resolved the problem.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;3. Enable screen off after lid closing:&lt;/h2&gt;
+&lt;p&gt;https://askubuntu.com/questions/1048063/ubuntu-server-how-do-disable-sleep-when-laptop-screen-is-closed-but-allow-scre&lt;/p&gt;
+&lt;p&gt;Since Ubuntu 18.04 doesn't have a /etc/rc.local file by default we need to create one.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo vi /etc/rc.local&lt;/code&gt; &lt;br&gt;
+press i to enter insert mode&lt;/p&gt;
+&lt;p&gt;Type the following 3 lines&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash    &lt;/span&gt;
+setterm --blank &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="c1"&gt;# here 1 means 1 minute &lt;/span&gt;
+&lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Next press escape, then type :wq to save and quit vi&lt;br&gt;
+Now change the permissions so the file can execute   &lt;/p&gt;
+&lt;p&gt;sudo chown root /etc/rc.local &lt;br&gt;
+sudo chmod 755 /etc/rc.local   &lt;/p&gt;
+&lt;p&gt;now restart the rc-local service. Type the following&lt;/p&gt;
+&lt;p&gt;systemctl restart rc-local&lt;/p&gt;
+&lt;hr&gt;</content><category term="Server"></category></entry><entry><title>My First Review</title><link href="/my-first-review.html" rel="alternate"></link><published>2010-12-03T10:20:00+08:00</published><updated>2010-12-03T10:20:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2010-12-03:/my-first-review.html</id><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;
+&lt;p&gt;hello &lt;/p&gt;
+&lt;p&gt;dasd&lt;/p&gt;</content><category term="Review"></category></entry></feed>
