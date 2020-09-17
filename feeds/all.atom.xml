@@ -51,5 +51,5 @@ Now change the permissions so the file can execute   &lt;/p&gt;
 sudo chmod 755 /etc/rc.local   &lt;/p&gt;
 &lt;p&gt;now restart the rc-local service. Type the following&lt;/p&gt;
 &lt;p&gt;systemctl restart rc-local&lt;/p&gt;
-&lt;hr&gt;</content><category term="Server"></category></entry><entry><title>Tab 和 Space 不相容</title><link href="/tab-he-space-bu-xiang-rong.html" rel="alternate"></link><published>2010-12-03T10:20:00+08:00</published><updated>2010-12-03T10:20:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2010-12-03:/tab-he-space-bu-xiang-rong.html</id><content type="html">&lt;p&gt;在 Makefile 中，句首只认 Tab
+&lt;hr&gt;</content><category term="Server"></category></entry><entry><title>Tab 和 Space 不相容</title><link href="/tab-he-space-bu-xiang-rong.html" rel="alternate"></link><published>2010-12-03T10:20:00+08:00</published><updated>2010-12-03T10:20:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2010-12-03:/tab-he-space-bu-xiang-rong.html</id><content type="html">&lt;p&gt;在 Makefile 中，句首只认 Tab &lt;br&gt;
 在 Python, Json, Yaml 。。。。，中，Space 是一等公民&lt;/p&gt;</content><category term="Language"></category></entry></feed>
