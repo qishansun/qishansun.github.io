@@ -4,49 +4,56 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
+<loc>/404.html</loc>
+<lastmod>2020-09-18T15:48:59-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/</loc>
-<lastmod>2020-09-18T11:46:05-00:00</lastmod>
+<lastmod>2020-09-18T15:48:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-09-18T11:46:05-00:00</lastmod>
+<lastmod>2020-09-18T15:48:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-09-18T11:46:05-00:00</lastmod>
+<lastmod>2020-09-18T15:48:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/authors.html</loc>
-<lastmod>2020-09-18T11:46:05-00:00</lastmod>
+<lastmod>2020-09-18T15:48:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-09-18T11:46:05-00:00</lastmod>
+<lastmod>2020-09-18T15:48:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/search.html</loc>
-<lastmod>2020-09-18T11:46:05-00:00</lastmod>
+<lastmod>2020-09-18T15:48:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/color_names_in_pyplot.html</loc>
+<loc>/color-names-in-pyplot.html</loc>
 <lastmod>2020-09-18T07:40:31+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
