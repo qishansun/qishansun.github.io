@@ -9,12 +9,15 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta property="og:title" content="Qishansun.com"/>
-<meta name="twitter:title" content="Qishansun.com">
-<meta property="og:url" content="" />
+<meta property="og:title" content="Search · Qishansun.com"/>
+<meta name="twitter:title" content="Search · Qishansun.com">
+<meta property="og:url" content="/search.html" />
+<meta property="og:description" content="Search results for Qishansun.com blog" />
+<meta name="twitter:description" content="Search results for Qishansun.com blog">
 <meta property="og:site_name" content="Qishansun.com" />
 <meta property="og:article:author" content="Qishansun" />
-        <title>Qishansun.com - Ubuntu Server tag</title>
+        <title>Search · Qishansun.com
+</title>
         <link href="/theme/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
         <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
@@ -64,36 +67,9 @@
                 <div class="row-fluid">
                     <div class="span1"></div>
                     <div class="span10">
-
-
-<div class="row-fluid">
-
-    <div class="row-fluid">
-
+    <div class="span8 offset2">
+        <div id="tipue_search_content"><div id="tipue_search_loading"></div></div>
     </div>
-
-    <div class="row-fluid">
-        <div class="span8 offset2">
-            <header>
-            <h1 id="recent-posts">Recent Posts <a id="allposts" href="/archives.html">all posts</a></h1>
-            </header>
-        <div class="recent-posts">
-            <div itemscope class="recent-posts-article">
-                <a href="/install-ubuntu-server-on-laptop.html">
-                    Install Ubuntu Server on laptop
-                </a>
-                <div class="recent-posts-posted">
-                    posted in
-                    <a href="/categories.html#server-ref">Server</a>
-                    <div class="recent-posts-time">
-                        <time itemprop="dateCreated" datetime="2020-09-17T00:00:00+08:00">Thu 17 September 2020</time>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
                     </div>
                     <div class="span1"></div>
                 </div>
@@ -108,14 +84,21 @@
         Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
         Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
     </div>
-</footer>        <script src="/theme/jquery.min.js"></script>
-        <script src="/theme/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
+</footer><script src="/theme/jquery-2.2.0.min.js"></script>
+<script src="/theme/tipuesearch/tipuesearch_set.js"></script>
+<script src="/theme/tipuesearch/tipuesearch.min.js"></script>
+
+<script src="/tipuesearch_content.js"></script>
+
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch({
+             'mode' : 'json',
+         'show': 10,
+         'newWindow': false,
+     });
+});
+</script>
     </body>
     <!-- Theme: Elegant built for Pelican
         License : MIT -->
