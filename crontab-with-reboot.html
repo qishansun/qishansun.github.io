@@ -16,8 +16,8 @@
 <meta property="og:description" content="In crontab, to enalbe tasks on reboot, the normal way is to use @reboot cmd /path/to/file Pitfall here is that, on startup $PATH may not be fully or correctely set yet. Then, cmd could be not found. To avoid such error, you can: - use full path cmd instead …" />
 <meta property="og:site_name" content="Qishansun.com" />
 <meta property="og:article:author" content="Qishansun" />
-<meta property="og:article:published_time" content="2020-10-02T22:41:00.015749+08:00" />
-<meta property="og:article:modified_time" content="2020-10-02T22:41:00.015749+08:00" />
+<meta property="og:article:published_time" content="2020-10-02T22:46:19.172232+08:00" />
+<meta property="og:article:modified_time" content="2020-10-02T22:46:19.172232+08:00" />
 <meta name="twitter:title" content="Crontab with @reboot ">
 <meta name="twitter:description" content="In crontab, to enalbe tasks on reboot, the normal way is to use @reboot cmd /path/to/file Pitfall here is that, on startup $PATH may not be fully or correctely set yet. Then, cmd could be not found. To avoid such error, you can: - use full path cmd instead …">
 
@@ -88,13 +88,13 @@
         <div class="span8 offset2 article-content">
             
             <p>In <strong>crontab</strong>, to enalbe tasks on reboot, the normal way is to use</p>
-<p><code>@reboot cmd /path/to/file</code></p>
+<p><code>@reboot cmd /path/to/file</code>   </p>
 <p>Pitfall here is that, on startup <strong>$PATH</strong> may not be fully or correctely set yet. Then, cmd could be not found.</p>
 <p>To avoid such error, you can: <br>
-- use full path cmd instead
-- or 
-- set <code>$PATH</code> ahead.</p>
-<p>To set <code>$Path</code> for <strong>crontab</strong>, firstly <code>echo $PATH</code>, copy the output, then in <strong>crontab</strong>, put <code>$PATH=copied-line</code> above <code>@reboot</code> line, that's it.</p>
+- use full path cmd instead <br>
+- or <br>
+- set <code>$PATH</code> ahead.   </p>
+<p>To set <code>$Path</code> for <strong>crontab</strong>, firstly <code>echo $PATH</code> in terminal, copy the output, then in <strong>crontab</strong>, put <code>$PATH=copied-line</code> above <code>@reboot</code> line, that's it.</p>
 
 
              
@@ -126,7 +126,7 @@
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-10-02T22:41:00.015749+08:00">Oct 2, 2020</time>
+            <time itemprop="dateCreated" datetime="2020-10-02T22:46:19.172232+08:00">Oct 2, 2020</time>
 
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#server-ref">Server</a>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Qishansun.com - Server</title><link href="/" rel="alternate"></link><link href="/feeds/server.atom.xml" rel="self"></link><id>/</id><updated>2020-10-02T22:41:00+08:00</updated><entry><title>Crontab with @reboot</title><link href="/crontab-with-reboot.html" rel="alternate"></link><published>2020-10-02T22:41:00+08:00</published><updated>2020-10-02T22:41:00+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2020-10-02:/crontab-with-reboot.html</id><summary type="html">&lt;p&gt;In &lt;strong&gt;crontab&lt;/strong&gt;, to enalbe tasks on reboot, the normal way is to use&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;@reboot cmd /path/to/file&lt;/code&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Qishansun.com - Server</title><link href="/" rel="alternate"></link><link href="/feeds/server.atom.xml" rel="self"></link><id>/</id><updated>2020-10-02T22:46:19+08:00</updated><entry><title>Crontab with @reboot</title><link href="/crontab-with-reboot.html" rel="alternate"></link><published>2020-10-02T22:46:19+08:00</published><updated>2020-10-02T22:46:19+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2020-10-02:/crontab-with-reboot.html</id><summary type="html">&lt;p&gt;In &lt;strong&gt;crontab&lt;/strong&gt;, to enalbe tasks on reboot, the normal way is to use&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@reboot cmd /path/to/file&lt;/code&gt;   &lt;/p&gt;
 &lt;p&gt;Pitfall here is that, on startup &lt;strong&gt;$PATH&lt;/strong&gt; may not be fully or correctely set yet. Then, cmd could be not found.&lt;/p&gt;
 &lt;p&gt;To avoid such error, you can: &lt;br&gt;
 - use full path cmd instead …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In &lt;strong&gt;crontab&lt;/strong&gt;, to enalbe tasks on reboot, the normal way is to use&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;@reboot cmd /path/to/file&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@reboot cmd /path/to/file&lt;/code&gt;   &lt;/p&gt;
 &lt;p&gt;Pitfall here is that, on startup &lt;strong&gt;$PATH&lt;/strong&gt; may not be fully or correctely set yet. Then, cmd could be not found.&lt;/p&gt;
 &lt;p&gt;To avoid such error, you can: &lt;br&gt;
-- use full path cmd instead
-- or 
-- set &lt;code&gt;$PATH&lt;/code&gt; ahead.&lt;/p&gt;
-&lt;p&gt;To set &lt;code&gt;$Path&lt;/code&gt; for &lt;strong&gt;crontab&lt;/strong&gt;, firstly &lt;code&gt;echo $PATH&lt;/code&gt;, copy the output, then in &lt;strong&gt;crontab&lt;/strong&gt;, put &lt;code&gt;$PATH=copied-line&lt;/code&gt; above &lt;code&gt;@reboot&lt;/code&gt; line, that's it.&lt;/p&gt;</content><category term="Server"></category><category term="Ubuntu Server"></category></entry><entry><title>Install Ubuntu Server on laptop</title><link href="/install-ubuntu-server-on-laptop.html" rel="alternate"></link><published>2020-09-17T00:00:00+08:00</published><updated>2020-09-17T22:42:03+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2020-09-17:/install-ubuntu-server-on-laptop.html</id><summary type="html">&lt;p&gt;&lt;img alt="Ubuntu Server" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_350,h_121/https://assets.ubuntu.com/v1/55eda3ae-Servers+-white.svg"&gt;&lt;/p&gt;
+- use full path cmd instead &lt;br&gt;
+- or &lt;br&gt;
+- set &lt;code&gt;$PATH&lt;/code&gt; ahead.   &lt;/p&gt;
+&lt;p&gt;To set &lt;code&gt;$Path&lt;/code&gt; for &lt;strong&gt;crontab&lt;/strong&gt;, firstly &lt;code&gt;echo $PATH&lt;/code&gt; in terminal, copy the output, then in &lt;strong&gt;crontab&lt;/strong&gt;, put &lt;code&gt;$PATH=copied-line&lt;/code&gt; above &lt;code&gt;@reboot&lt;/code&gt; line, that's it.&lt;/p&gt;</content><category term="Server"></category><category term="Ubuntu Server"></category></entry><entry><title>Install Ubuntu Server on laptop</title><link href="/install-ubuntu-server-on-laptop.html" rel="alternate"></link><published>2020-09-17T00:00:00+08:00</published><updated>2020-09-17T22:42:03+08:00</updated><author><name>Qishansun</name></author><id>tag:None,2020-09-17:/install-ubuntu-server-on-laptop.html</id><summary type="html">&lt;p&gt;&lt;img alt="Ubuntu Server" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_350,h_121/https://assets.ubuntu.com/v1/55eda3ae-Servers+-white.svg"&gt;&lt;/p&gt;
 &lt;h2&gt;1. WIFI Conf&lt;/h2&gt;
 &lt;p&gt;Edit on netplan is an option, but &lt;strong&gt;nmtui&lt;/strong&gt; is much faster.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;apt install ubuntu-drivers-common&lt;/span&gt;
