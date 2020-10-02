@@ -5,51 +5,58 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/404.html</loc>
-<lastmod>2020-09-18T15:49:52-00:00</lastmod>
+<lastmod>2020-10-02T22:41:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/</loc>
-<lastmod>2020-09-18T15:49:52-00:00</lastmod>
+<lastmod>2020-10-02T22:41:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2020-09-18T15:49:52-00:00</lastmod>
+<lastmod>2020-10-02T22:41:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2020-09-18T15:49:52-00:00</lastmod>
+<lastmod>2020-10-02T22:41:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/authors.html</loc>
-<lastmod>2020-09-18T15:49:52-00:00</lastmod>
+<lastmod>2020-10-02T22:41:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2020-09-18T15:49:52-00:00</lastmod>
+<lastmod>2020-10-02T22:41:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/search.html</loc>
-<lastmod>2020-09-18T15:49:52-00:00</lastmod>
+<lastmod>2020-10-02T22:41:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>/crontab-with-reboot.html</loc>
+<lastmod>2020-10-02T22:41:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -96,7 +103,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/server.html</loc>
-<lastmod>2020-09-17T22:42:03+08:06</lastmod>
+<lastmod>2020-10-02T22:41:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -104,6 +111,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/category/text.html</loc>
 <lastmod>2020-09-17T23:12:34+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/ubuntu-server.html</loc>
+<lastmod>2020-10-02T22:41:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -130,15 +144,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/ubuntu-server.html</loc>
-<lastmod>2020-09-17T22:42:03+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>/author/qishansun.html</loc>
-<lastmod>2020-09-18T07:40:31+08:06</lastmod>
+<lastmod>2020-10-02T22:41:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
